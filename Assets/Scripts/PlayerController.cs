@@ -53,9 +53,10 @@ public class PlayerController : MonoBehaviour
     if(Input.GetKeyDown(KeyCode.UpArrow))
     {
       if(canJump == true)
-      {
+     {
         rigidbody2d.AddForce(new Vector2(0, 500));
-        canJump = false;
+        AudioManager.Instance.Play("跳");
+       canJump = false;
       }
     }
   }
